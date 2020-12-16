@@ -15,7 +15,6 @@ body {
   font-family: 'Press Start 2P', sans-serif;
   color: #eee;
   background-color: #222;
-  /* background-color: #60b347; */
 }
 
 /* LAYOUT */
@@ -58,15 +57,15 @@ h1 {
 
 .number {
   background: #eee;
+  bottom: 0;
   color: #333;
   font-size: 6rem;
-  width: 15rem;
-  padding: 3rem 0rem;
-  text-align: center;
-  position: absolute;
-  bottom: 0;
   left: 50%;
+  padding: 3rem 0rem;
+  position: absolute;
+  text-align: center;
   transform: translate(-50%, 50%);
+  width: 15rem;
 }
 
 .between {
