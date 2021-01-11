@@ -153,7 +153,7 @@
 
 // console.log(pet.getSummary());
 
-// //For loops
+//FOR LOOPS
 
 // const years = [1985, 1974, 2010, 1678];
 // const ages = [];
@@ -165,7 +165,7 @@
 // console.log(ages);
 
 
-// //continue and break
+// continue and break
 // for (let i = 0; i < pet.length; i++) {
 //   if(typeof pet[i] === 'number') break;
 //   console.log(pet[i], typeof pet[i]);
@@ -193,8 +193,44 @@ const petTwo = {
 //   console.log(`Start ${exer}`);
 // }
 
-//While
 
+// FOR (LET) OF
+
+const names = ['Mando', 'Luke', 'Grogu', 'Cara', 'Kylo', 'Chew'];
+
+for(let name of names) {
+  if(name === 'Grogu') {
+    console.log('Baby yodaaa!!');
+    break;
+  }
+  console.log(name);
+}
+
+//FOR EACH --> Its slower and apply only for array.
+
+names.forEach(function(name, index) {
+  if(name === 'Luke') {
+    console.log('Best Jedi!!');
+    // break; CANNOT USE BREAK OR CONTINUE INSIDE A FOREACH :(
+    }
+    console.log(name, index);
+})
+
+// FOR IN --> lOOP OBJECTS
+
+const user = {
+  name: 'Sammy',
+  active: true,
+  money: 450999,
+  subscribers: 456789000
+}
+
+for(let x in user) {
+  console.log(user[x]);
+}
+
+
+//While
 let dice = Math.trunc(Math.random() * 6 ) + 1;
 
 while(dice !== 6) {
