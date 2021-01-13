@@ -140,3 +140,7 @@ matilda.calcAge();
 const f = jane.calcAge;
 f(); // undefined error, because the this is not attached to an object, there is not an owner.
 
+
+//  *********************************************************************************************
+// Regular Functions vs. Arrow Functions
+//  *********************************************************************************************
