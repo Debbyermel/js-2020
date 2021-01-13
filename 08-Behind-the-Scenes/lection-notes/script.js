@@ -118,29 +118,84 @@
 
 // This key word inside a method.
 // When we have a method call, this keyword inside of the method will be the object calling the method.
-const jane = {
-  year: 2001,
-  calcAge: function() {
-    console.log(this);
-    console.log(2037 - this.year);
-  }
-};
-jane.calcAge();
+// const jane = {
+//   year: 2001,
+//   calcAge: function() {
+//     console.log(this);
+//     console.log(2037 - this.year);
+//   }
+// };
+// jane.calcAge();
 
-const matilda = {
-  year: 2017
-};
+// const matilda = {
+//   year: 2017
+// };
 
-// Method Borrowing
-matilda.calcAge = jane.calcAge;
-// It will be matilda age 20
-//This keyword always points to the object that is calling the method.
-matilda.calcAge();
+// // Method Borrowing
+// matilda.calcAge = jane.calcAge;
+// // It will be matilda age 20
+// //This keyword always points to the object that is calling the method.
+// matilda.calcAge();
 
-const f = jane.calcAge;
-f(); // undefined error, because the this is not attached to an object, there is not an owner.
+// const f = jane.calcAge;
+// f(); // undefined error, because the this is not attached to an object, there is not an owner.
 
 
 //  *********************************************************************************************
 // Regular Functions vs. Arrow Functions
 //  *********************************************************************************************
+
+// const firstName = 'Matilda';
+
+// const jonas = {
+//   year: 1991,
+//   calcAge: function () { // On a method such as .calcAge itself, this refers to its parent object
+//     console.log(2037 - this.year); // That's why we can get the value of year from the jonas object with this.year.
+
+//     //isMillenial is a function expression inside a function expression, assigned to the property calcAge of the Jonas object.
+//     const isMillenial = function () {
+//       console.log(this); // the value of this is the window object, or undefined in strict mode
+//       console.log(this.year >= 1981 && this.year <= 1996);
+//       //The function expression isMillenial is not a method, but is instead a simple function.
+//       //A function call will refer to the global object when using this.
+//       //In this case, the global object is window. Although, it should be pointed out that when in strict mode, this will instead return undefined.
+
+//     }
+//   //Here isMillenial is an arrow function, it does not create a new value for this.
+//   //Instead, the this keyword will still refer to the same value as its parent does, which works perfectly for our purposes.
+//   const isMillenial = () => {
+//     console.log(this); // the value of this of my parent is the jonas object
+//     console.log(this.year >= 1981 && this.year <= 1996);
+//   }
+//     isMillenial();
+//   },
+//   greet: () => {
+//       console.log(this);
+//       console.log(this.firstName);
+//   }
+// };
+
+// jonas.greet();
+
+
+// Arguments keyword
+const addExp = function(a, b) {
+  // On regular function arguments existes
+  console.log(arguments);
+  return a+ b;
+}
+addExp(4, 8);
+addExp(7,8,9,2,4);
+
+const addArrow = (a, b) => {
+  // On arrow function arguments is not defined
+  console.log(arguments);
+  return a + b;
+}
+addArrow(2, 2);
+
+
+
+
+
+
