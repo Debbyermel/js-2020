@@ -241,3 +241,10 @@ while(dice !== 6) {
   }
 }
 
+//Random for a number that goes from 1 to 10
+// let randomNum = Math.floor(Math.random() * 10 + 1);
+
+//Random for a number that goes from 0 to 10
+// let randomNum = Math.floor(Math.random() * 11);
+
+
