@@ -66,3 +66,7 @@ restaurant.orderDelivery({
   address: 'Via de Sole, 21',
   starterIndex: 1
 });
+
+
+// Spread operator
+
