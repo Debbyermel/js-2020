@@ -1,24 +1,62 @@
-function addFavoriteBook(bookName) {
-  if(!bookName.includes("Great")) {
-    favoriteBooks.push(bookName);
+class Bookshelf {
+ 	constructor() {
+		this.favoriteBooks = [];
+	}
+
+	addFavoriteBook(bookName) {
+		if (!bookName.includes("Great")) {
+			this.favoriteBooks.push(bookName);
+		}
+	}
+
+  printBooks() {
+    console.log(`
+      favorite Books: ${ String(this.favoriteBooks.length) };
+    `);
+    for(let bookName of this.favoriteBooks) {
+      console.log(bookName);
+    };
   }
 }
 
-function printBooks() {
-  console.log(`
-    favorite Books: ${favoriteBooks.length};
-  `);
-  for(let bookName of favoriteBooks) {
-    console.log(bookName);
-  }
+function loadBooks(bookshelf) {
+	fakeAjax(BOOK_API,function onBooks(bookNames){
+		for (let bookName of bookNames) {
+			bookshelf.addFavoriteBook(bookName);
+		}
+		bookshelf.printBooks();
+	});
 }
 
-let favoriteBooks = [];
+var BOOK_API = "https://some.url/api";
+var myBooks = new Bookshelf();
+loadBooks(myBooks);
 
-addFavoriteBook("A Song of Ice and Fire");
-addFavoriteBook("The Great Gatsby");
-addFavoriteBook("Crime & Punishment");
-addFavoriteBook("Great Expectations");
-addFavoriteBook("You Don't Know JS");
+function fakeAjax(url,cb) {
+	setTimeout(function fakeLoadingDelay(){
+		cb([
+			"A Song of Ice and Fire",
+			"The Great Gatsby",
+			"Crime & Punishment",
+			"Great Expectations",
+			"You Don't Know JS"
+		]);
+	},500);
+}
 
-printBooks();
+
+// ***********************
+// function ask(question) {
+//   console.log(this.teacher, question);
+// }
+
+// function otherClass() {
+//   var myContext = {
+//     teacher: "Suzy"
+//   };
+//   // ask.call(myContext, "My question?");
+//   // console.log(typeof myContext);
+// }
+
+// // otherClass();
+// ***********************
