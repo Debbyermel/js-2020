@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
+  box-sizing: inherit;
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
 }
 
 html {
@@ -23,23 +23,46 @@ body {
   justify-content: center;
   line-height: 1.5;
   position: relative;
-
 }
 
 header {
   font-size: 1.5rem;
   font-weight: 600;
-}
-
-header,
-form {
-  min-height: 20vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-top: 80px;
 }
 
 h1 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
+  text-align: center;
+}
+
+
+input {
+  border: none;
+  font-family: inherit;
+  font-size: 14px;
+  margin-right: 0;
+  padding: 10px;
+  width: 75%;
+}
+
+.addBtn {
+  background: #da81dd;
+  border-radius: 6px;
+  color: rgb(247, 241, 241);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 0;
+  padding: 10px;
+  text-align: center;
+  transition: 0.3s;
+  width: 25%;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+  color: #fff;
 }
