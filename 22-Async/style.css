@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Overlock');
+
+body {
+	background: #eef;
+}
+#weather {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.widget {
+  border-radius: 20px;
+  box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  font-family: 'overlock', Helvetica, sans-serif;
+  height: 300px;
+  width: 400px;
+}
+
+.weather-icon {
+  height: 160px;
+  margin: 0 auto;
+  width: 160px;
+}
+
+.detail {
+  color: #000;
+  font-size: 21px;
+  margin-top: -25px;
+}
+
+.tempF {
+  font-size: 60px;
+  color: #fa0;
+  font-weight: 700;
+}
+
+p {
+  font-size: 20px;
+}
+
