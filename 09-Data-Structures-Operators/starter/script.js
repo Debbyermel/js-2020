@@ -37,8 +37,8 @@ let [main, secondary] = restaurant.categories;
 [main, secondary] = [secondary, main];
 
 //Getting the first, skip the second and getting the third item of array
-const [main, , secondary] = restaurant.categories;
-console.log('categories: ' + main, secondary );
+// const [main, , secondary] = restaurant.categories;
+// console.log('categories: ' + main, secondary );
 
 //Nested destructuring array
 const nested = [2, 4, [5,6]];
@@ -50,8 +50,9 @@ const [p=1, q=1, r=1] = [8, 9];
 
 
 // Destructuring Objects:
+const { name, openingHours, categories } = restaurant;
 
-//Renaming
+//Renaming the variables
 const {
   name: restaurantName,
   openingHours: hours,
@@ -59,13 +60,11 @@ const {
 } = restaurant;
 console.log(restaurantName, hours, tags);
 
-
 //Default Values
 const { menu = [], starterMenu: starters = []} =  restaurant;
 console.log(menu, starters);
 
-
-//Mutating Variables
+//Mutating Variables while destructing objects
 let a = 111;
 let b = 999;
 const testObj = {
@@ -73,18 +72,21 @@ const testObj = {
   b: 7,
   c: 14
 }
-console.log(({a, b}));
 
+// ({a, b} = testObj);
+console.log(a, b);
 
 // Nested Objects
-const { fri: { open: openTime, close: closeTime }, } = restaurant.openingHours;
-console.log(openTime, closeTime);
+const { fri: { open: openTime, close: closeTime }, } = openingHours;
+console.log(`open: ${openTime}hr, close: ${closeTime}hr`);
 
 //Passing An destructured object as function parameter
 
 restaurant.orderDelivery({
+  time: '22:30',
   address: 'Via de Sole, 21',
-  starterIndex: 1
+  starterIndex: 1,
+  mainIndex: 2
 });
 
 
