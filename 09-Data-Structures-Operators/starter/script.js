@@ -26,6 +26,9 @@ const restaurant = {
       `order received! ${this.starterMenu[starterIndex]} and
       ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
     );
+  },
+  orderPast: function(item1, item2, item3) {
+    console.log(`You choose the ${item1}, ${item2} and ${item3} to be added into your pasta.`);
   }
 };
 
@@ -91,4 +94,47 @@ restaurant.orderDelivery({
 
 
 // Spread operator
+// Help to get element of an array
+// Only used on elements separated with commes
+const arr = [7, 8, 9];
 
+const badArr = [1, 2, arr[0], arr[1], arr[2]];
+
+const goodArr = [1, 2, ...arr];
+
+//Log individual
+console.log(...goodArr);
+
+// Adding new element on an array
+const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+console.log(newMenu);
+
+//Copy new array
+const mainMenuCopy = [...restaurant.mainMenu];
+
+//Join arrays
+const fullMenu = [...restaurant.starterMenu, ...newMenu];
+console.log(`Our full menu: ${fullMenu}`);
+
+//Spread interacts with all iterables: array, string, maps and sets but not object.
+const str = 'Debora';
+const letters = [...str, '', 'S.'];
+console.log(letters);
+
+//Using the spread with a function.
+// const ingredientes = [
+//   prompt('Let\'s make a pasta! ingrediente 1?'),
+//   prompt('Let\'s make a pasta! ingrediente 2?'),
+//   prompt('Let\'s make a pasta! ingrediente 3?')
+//  ];
+//  console.log(ingredientes);
+//  restaurant.orderPast(...ingredientes);
+
+
+//Copy objects and add new elements
+const newRestaurant = {...restaurant, founder: 'Guiseppe', foundYear: 1956 };
+console.log(newRestaurant);
+
+//Copy original and add rename
+const restaurantCopy = { ...restaurant };
+restaurantCopy.name = 'Preggo';
