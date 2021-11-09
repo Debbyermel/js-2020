@@ -29,6 +29,26 @@ const restaurant = {
   }
 };
 
+// Destructuring Arrays:
+
+//Getting the first and second item of array
+let [main, secondary] = restaurant.categories;
+//Switching variables
+[main, secondary] = [secondary, main];
+
+//Getting the first, skip the second and getting the third item of array
+const [main, , secondary] = restaurant.categories;
+console.log('categories: ' + main, secondary );
+
+//Nested destructuring array
+const nested = [2, 4, [5,6]];
+const [i, ,[j,k]] = nested;
+
+//Default values when we dont know the size of array, we can assign 1 by default:
+const [p=1, q=1, r=1] = [8, 9];
+//returns 8, 9, 1
+
+
 // Destructuring Objects:
 
 //Renaming
