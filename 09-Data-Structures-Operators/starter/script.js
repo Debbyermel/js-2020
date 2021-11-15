@@ -93,7 +93,7 @@ restaurant.orderDelivery({
 });
 
 
-// Spread operator
+// Spread Operator
 // Help to get element of an array
 // Only used on elements separated with commes
 const arr = [7, 8, 9];
@@ -138,3 +138,23 @@ console.log(newRestaurant);
 //Copy original and add rename
 const restaurantCopy = { ...restaurant };
 restaurantCopy.name = 'Preggo';
+
+
+// REST OPERATOR:
+// will collect remaing elements of an array and save it on a new array.
+// always must be t last element.
+// just one in any destructing
+const { sat, ...weekDays } = restaurant.openingHours;
+console.log(weekDays);
+
+//Rest parameters on functions
+const add = function(...numbers) {
+  let sum = 0;
+  for(let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+}
+
+add(2,3);
+add(2,3,8,9,7,0,2);
+add(2,3.7,8,8,9);
