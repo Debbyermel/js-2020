@@ -142,8 +142,8 @@ restaurantCopy.name = 'Preggo';
 
 // REST OPERATOR:
 // will collect remaing elements of an array and save it on a new array.
-// always must be t last element.
-// just one in any destructing
+// Always must be t last element.
+// Just one in any destructing
 const { sat, ...weekDays } = restaurant.openingHours;
 console.log(weekDays);
 
