@@ -158,3 +158,21 @@ const add = function(...numbers) {
 add(2,3);
 add(2,3,8,9,7,0,2);
 add(2,3.7,8,8,9);
+
+
+//Nullish operator (Null or undefined)
+restaurant.guestNumber = 0;
+const guests = restaurant.guestNumber || 10;
+const correctGuessNumber = restaurant.guestNumber ?? 10;
+
+
+//OR  assignment operator
+const rest2 = {
+  name: 'Capri',
+  owner: 'Barolo Rossi'
+}
+
+rest2.numberGuests = rest2.numberGuests || 10;
+
+// exist or assigned a value short way.
+rest2.numberGuests ||= 10;
