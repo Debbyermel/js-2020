@@ -176,3 +176,28 @@ rest2.numberGuests = rest2.numberGuests || 10;
 
 // exist or assigned a value short way.
 rest2.numberGuests ||= 10;
+
+
+//FOR-OF
+const menuComplete = [...restaurant.starterMenu, ...restaurant.mainMenu];
+for (const item of menuComplete) console.log(item);
+
+
+//Looping objects: object key, value, entries
+//Property names
+for(const day of Object.keys(openingHours)) {
+  console.log(day);
+}
+
+// Property values
+const values = Object.values(openingHours);
+console.log(values);
+
+// Property entries
+const entries = Object.entries(openingHours);
+console.log(entries);
+
+// Loop and destructuring the object
+for(const [key, {open, close}] of entries) {
+  console.log(`On ${key} we open at ${open} and close at ${close}`);
+}
