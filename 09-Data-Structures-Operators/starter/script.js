@@ -201,3 +201,25 @@ console.log(entries);
 for(const [key, {open, close}] of entries) {
   console.log(`On ${key} we open at ${open} and close at ${close}`);
 }
+
+
+// Sets data structure
+// Just log the unique values
+// Set has no indexes
+// Main use is to remove duplicated from arrays
+const ordersSet = new Set(['Risotto', 'carpachio', 'pizza', 'pasta', 'pizza']);
+console.log(ordersSet);
+console.log(ordersSet.size);
+console.log(ordersSet.has('Bread'));
+ordersSet.add('Garlic Bread');
+ordersSet.delete('carpachio');
+// ordersSet.clear();
+console.log(ordersSet);
+
+for(const order of ordersSet) {
+  console.log(order);
+}
+
+const staff = ['chef', 'waiter', 'cashier', 'manager', 'chef', 'hostess'];
+const staffUnique = [...new Set(staff)];
+console.log(staffUnique);
