@@ -86,7 +86,13 @@ console.log(arr.at(0));
 
 //Getting the last
 console.log(arr[arr.length - 1]);
+console.log(arr.slice(-1)[0]);
 console.log(arr.at(-1));
 
 
+const arr2 = [1, 2, "three", 4, 5, true, false];
+console.log(arr2.at(0)); // Expected Output: 1
+console.log(arr2.at(2)); // Expected Output: "three"
+console.log(arr2.at(-1)); // Expected Output: false
+console.log(arr2.at(-3)); // Expected Output: 5
 
