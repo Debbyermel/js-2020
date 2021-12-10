@@ -206,7 +206,7 @@ for(const [key, {open, close}] of entries) {
 // Sets data structure
 // Just log the unique values
 // Set has no indexes
-// Main use is to remove duplicated from arrays
+// Main use is to remove duplicated from arrays or check unique values
 const ordersSet = new Set(['Risotto', 'carpachio', 'pizza', 'pasta', 'pizza']);
 console.log(ordersSet);
 console.log(ordersSet.size);
@@ -223,3 +223,16 @@ for(const order of ordersSet) {
 const staff = ['chef', 'waiter', 'cashier', 'manager', 'chef', 'hostess'];
 const staffUnique = [...new Set(staff)];
 console.log(staffUnique);
+
+
+// Maps data structure
+const question = new Map([
+  ['question', 'What is the best programming language in the world?'],
+  [1, 'C'],
+  [2, 'Java'],
+  [3, 'JavaScript'],
+  ['correct', 3],
+  [true, 'Correct 🎉'],
+  [false, 'Try again!'],
+]);
+console.log(question);
