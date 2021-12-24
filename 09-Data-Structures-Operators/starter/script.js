@@ -226,6 +226,7 @@ console.log(staffUnique);
 
 
 // Maps data structure
+//
 const question = new Map([
   ['question', 'What is the best programming language in the world?'],
   [1, 'C'],
@@ -237,7 +238,20 @@ const question = new Map([
 ]);
 console.log(question);
 
+
+const rest = new Map();
+rest.set('name', 'Mamma Mia');
+rest.set(1, 'Miami, USA');
+rest.set('open', 11);
+rest.set('close', 23);
+console.log(rest.set(2, 'Livorno, Italy'));
+console.log(rest.get('name'));
+
+const time = 21;
+console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
+
 // Working With Strings - Part 2
+//
 const airline = 'Latam Airlines';
 
 console.log(airline.toLowerCase());
