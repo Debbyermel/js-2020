@@ -224,7 +224,7 @@ const staff = ['chef', 'waiter', 'cashier', 'manager', 'chef', 'hostess'];
 const staffUnique = [...new Set(staff)];
 console.log(staffUnique);
 
-
+//
 // Maps data structure
 //
 const question = new Map([
@@ -250,12 +250,16 @@ console.log(rest.get('name'));
 const time = 21;
 console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
 
+//
 // Working With Strings - Part 2
 //
 const airline = 'Latam Airlines';
-
 console.log(airline.toLowerCase());
 console.log(airline.toUpperCase());
+console.log('B737'[0]);
+console.log(airline.indexOf('r'));
+console.log(airline.lastIndexOf('r'));
+
 
 // Fix capitalization in name
 const passenger = 'dEbORA';
