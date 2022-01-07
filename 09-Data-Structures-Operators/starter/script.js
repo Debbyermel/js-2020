@@ -260,6 +260,21 @@ console.log('B737'[0]);
 console.log(airline.indexOf('r'));
 console.log(airline.lastIndexOf('r'));
 
+const checkMiddleSeat = function(seat) {
+  //B and E are middle seats
+  const s = seat.slice(-1);
+  if(s=== 'B' || s === 'E') {
+    console.log('U got the middle seat');
+  }
+  else {
+    console.log('U got lucky!!');
+  }
+}
+
+checkMiddleSeat('11B');
+checkMiddleSeat('23C');
+checkMiddleSeat('3E');
+
 
 // Fix capitalization in name
 const passenger = 'dEbORA';
@@ -277,3 +292,33 @@ const loginEmail = '  Hello@deb.Io \n';
 const normalizedEmail = loginEmail.toLowerCase().trim();
 console.log(normalizedEmail);
 console.log(email === normalizedEmail);
+
+//replacing
+
+const priceCAD = '288,97cad'
+console.log(priceCAD.replace('cad', '$').replace(',', '.'));
+
+//Booleans
+const plane = 'A320neo';
+console.log(plane.includes('A320'));
+console.log(plane.startsWith('A'));
+console.log(plane.endsWith('neo'));
+
+//SPLIT
+console.log('a+crazy+string'.split('+'));
+const[firstName, lastName] = 'Deb Ermel'.split(' ');
+const newName = ['MRS.', firstName, lastName.toUpperCase()].join(' ');
+console.log(newName);
+
+
+function capitalizeName(name) {
+  const names = name.split(' ');
+  const namesUpper = [];
+
+  for(const n of names) {
+    namesUpper.push(n[0].toUpperCase() + n.slice(1));
+  }
+  console.log(namesUpper.join(' '));
+}
+
+capitalizeName('sambuca', 'jager', 'morzy');
